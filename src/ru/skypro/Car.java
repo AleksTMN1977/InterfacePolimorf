@@ -11,9 +11,9 @@ public class Car extends Transport {
         if (car != null) {
             System.out.println("Обслуживаем " + car.modelName);
             for (int i = 0; i < car.wheelsCount; i++) {
-                car.updateTyre();
+                updateTyre();
             }
-            car.checkEngine();
+            checkEngine();
 
         }
     }
