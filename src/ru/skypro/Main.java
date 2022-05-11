@@ -3,7 +3,7 @@ package ru.skypro;
 public class Main {
 
     public static void main(String[] args) {
-        Transport car = new Car("car1", 4);
+        Checkable car = new Car("car1", 4);
         Transport car2 = new Car("car2", 4);
         Transport truck = new Truck("truck1", 6);
         Transport truck2 = new Truck("truck2", 8);
@@ -11,9 +11,9 @@ public class Main {
         Transport bicycle2 = new Bicycle("bicycle2", 2);
 
 
-        car.check();
-        car2.check();
-        truck.check();
-        bicycle.check();
+        ServiceStation serviceStation = new ServiceStation();
+        serviceStation.service(truck2);
+        serviceStation.service(bicycle2);
+
     }
 }

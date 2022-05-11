@@ -5,12 +5,15 @@ public class Bicycle extends Transport {
         super(modelName, wheelsCount);
     }
 
-    public void check(Bicycle bicycle) {
-        if (bicycle != null) {
-            System.out.println("Обслуживаем " + bicycle.modelName);
-            for (int i = 0; i < bicycle.wheelsCount; i++) {
-                updateTyre();
-            }
+    @Override
+    public void check() {
+        System.out.println("Обслуживаем " + getModelName());
+        for (int i = 0; i < getWheelsCount(); i++) {
+            updateTyre();
         }
+    }
+
+    public void updateTyre() {
+        System.out.println("Меняем покрышку");
     }
 }
